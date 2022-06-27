@@ -1,4 +1,13 @@
 {
+  "name": "fitme",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "nusrat",
+  "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.1",
     "dotenv": "^16.0.1",
@@ -17,6 +26,7 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-prettier": "^4.0.0",
+    "nodemon": "^2.0.18",
     "prettier": "^2.7.1"
   }
 }
