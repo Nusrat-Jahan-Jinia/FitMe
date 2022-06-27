@@ -12,19 +12,23 @@
         <table>
           <thead>
             <tr>
+              <th>ID</th>
               <th>Name</th>
-              <th>Email</th>
-              <th>Manage</th>
+              <th>Scitific Name</th>
+              <th>Description</th>
+              <th>Food Value</th>
             </tr>
           </thead>
           <tbody id="users-table">
-            <% foods.forEach(function(user) { %>
-              <tr id="<%= user._id %>">
+            <% foods.forEach(function(food) { %>
+              <tr id="<%= food._id %>">
                 <td class="name">
-                  
-                  <span><%= user.name %></span>
+                  <span><%= food.id %></span>
+                  <span><%= food.name %></span>
                 </td>
-                <td> <span><%= user.name %></span></td>
+                <td> <span><%= food.s_name %></span></td>
+                <td> <span><%= food.des %></span></td>
+                <td> <span><%= food.value %></span></td>
               </tr>
             <% }); %>
           </tbody>

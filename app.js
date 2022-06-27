@@ -10,6 +10,9 @@ const usersRouter = require('./routers/usersRouter');
 const app = express();
 dotenv.config();
 app.set('view engine', 'ejs');
+// request parsers
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 // db connection
 mongoose
     .connect(process.env.MONGO_CONNECTION_STRING, {

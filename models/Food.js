@@ -7,19 +7,19 @@ const foodSchema = mongoose.Schema(
             required: true,
             trim: true,
         },
-        scientific_name: {
+        s_name: {
             type: String,
             required: true,
             trim: true,
             lowercase: true,
         },
-        description: {
+        des: {
             type: String,
             required: true,
             trim: true,
             lowercase: true,
         },
-        food_value: {
+        value: {
             type: String,
             required: true,
             trim: true,
