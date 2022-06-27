@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 
 // internal imports
 const foodsRouter = require('./routers/foodsRouter');
+const usersRouter = require('./routers/usersRouter');
 
 const app = express();
 dotenv.config();
@@ -23,6 +24,7 @@ app.get('/', (req, res) => {
     res.send('Hello World!!!!!');
 });
 app.use('/foods', foodsRouter);
+app.use('/users', usersRouter);
 
 // app running
 app.listen(process.env.PORT, () => {
