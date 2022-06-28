@@ -12,11 +12,7 @@ router.use(passport.initialize());
 
 // get users list
 router.get('/login', getLogin);
-// router.post('/login', passport.authenticate('local', {
-//  successRedirect: '/',
-//  failoreRedirect: '/login',
-// }));
-
 router.post('/login', getLoggedIn);
-router.post('/registration', getRegistration);
+router.post('/register', getRegistration);
+
 module.exports = router;
