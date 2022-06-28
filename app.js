@@ -2,12 +2,14 @@
 const express = require('express');
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
-
+const bodyParser = require('body-parser');
 // internal imports
 const foodsRouter = require('./routers/foodsRouter');
 const usersRouter = require('./routers/usersRouter');
+const loginRouter = require('./routers/loginRouter');
 
 const app = express();
+app.use(bodyParser.json());
 dotenv.config();
 app.set('view engine', 'ejs');
 // request parsers
@@ -23,12 +25,9 @@ mongoose
     .catch((err) => console.log(err));
 
 // routing setup
-app.get('/', (req, res) => {
-    res.send('Hello World!!!!!');
-});
+app.use('/', loginRouter);
 app.use('/foods', foodsRouter);
 app.use('/users', usersRouter);
-
 // app running
 app.listen(process.env.PORT, () => {
     console.log(`Example app listening on port ${process.env.PORT}`);
